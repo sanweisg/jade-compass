@@ -46,11 +46,16 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
             <ul className="space-y-3">
-              <li className="text-text-muted text-sm">
-                Email: hello@compassjade.app
+              <li>
+                <a href="/contact" className="text-text-muted hover:text-white text-sm transition-colors">
+                  Get in Touch
+                </a>
               </li>
               <li className="text-text-muted text-sm">
-                Response time: Within 24 hours
+                hello@compassjade.app
+              </li>
+              <li className="text-text-muted text-sm">
+                Response: Within 24 hours
               </li>
             </ul>
           </div>
@@ -61,14 +66,14 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Jade Compass. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-text-dim hover:text-text-muted text-xs transition-colors">
+            <a href="/privacy" className="text-text-dim hover:text-text-muted text-xs transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-text-dim hover:text-text-muted text-xs transition-colors">
+            <a href="/terms" className="text-text-dim hover:text-text-muted text-xs transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-text-dim hover:text-text-muted text-xs transition-colors">
-              Refund Policy
+            <a href="/contact" className="text-text-dim hover:text-text-muted text-xs transition-colors">
+              Contact
             </a>
           </div>
         </div>

@@ -107,63 +107,170 @@ CLIENT INFORMATION:
 - Target Customers: ${formData.targetCustomers || "N/A"}
 - Additional Context: ${formData.additionalInfo || "N/A"}`;
 
+  // ── Business Scan ($97) ──
   if (plan === "scan") {
-    return `You are a senior business intelligence analyst at Jade Compass. Produce a CONCISE but high-value Business Scan report.
+    return `You are a senior strategy consultant at Jade Compass, writing for a business owner who paid $97 for a focused market scan. Your report must feel like a $500 consulting deliverable — concise but dense with insight. NO generic advice. Every claim must be specific.
 
 ${clientInfo}
-PLAN: Business Scan ($97 — one-time)
+PLAN: Business Scan
 
-This is a focused, quick-turnaround analysis. Be direct, avoid fluff.
+WRITING GUIDELINES:
+- Use clear, direct language. No fluff, no filler paragraphs.
+- Every recommendation must name a specific action (e.g., "Launch a loyalty program targeting repeat pet owners within 60 days" not "Improve customer retention").
+- Include at least one data table (competitor comparison, market sizing, or pricing benchmark).
+- Use bullet points, bold for key numbers, and clear section breaks.
+- NEVER present made-up statistics. If search data lacks a specific number, say "estimated" or provide a range with an industry benchmark caveat.
+- Write in American English. Tone: confident, analytical, direct.
 
-REPORT STRUCTURE (keep each section concise):
-## Executive Summary (150-200 words)
-## Market Snapshot
-## Competitive Landscape
-## Strategic Recommendations (3)
+REPORT STRUCTURE:
+
+## Executive Summary
+3-4 sentences. The most important insight, the biggest threat, and the #1 recommendation. No filler.
+
+## Market Overview
+- Industry size & growth trajectory (use search data, note source if available)
+- Key trends affecting this specific business
+- Customer behavior shift (if relevant)
+- 1-paragraph "what this means for [business name]"
+
+## Competitive Position
+- A table: Competitor | Strengths | Weaknesses | Threat Level (Low/Med/High)
+- Key differentiators this business can exploit
+- Pricing analysis relative to competitors
+
+## Top 3 Strategic Recommendations
+For each:
+- **Recommendation:** One clear sentence
+- **Why:** Data or observation that supports it
+- **How:** Specific implementation steps (3-5 bullets)
+- **Impact:** Expected outcome (be specific — "could increase repeat purchase rate by 15-20%")
+
 ## Immediate Action Plan
+A 30-day plan: Week 1-2-3-4. Concrete actions, not vague suggestions.
 
-LENGTH: 4,000-5,000 characters total.`;
+LENGTH: 3,000-4,500 characters total.`;
   }
 
+  // ── Intelligence Briefing ($197/mo) ──
   if (plan === "briefing") {
-    return `You are a senior business intelligence analyst at Jade Compass. Produce a DETAILED Intelligence Briefing report.
+    return `You are a senior strategy consultant at Jade Compass, writing for a business owner who pays $197/month for ongoing intelligence. This report must demonstrate clear value that justifies the recurring investment. Think McKinsey Quarterly quality.
 
 ${clientInfo}
-PLAN: Intelligence Briefing ($197/month — ongoing subscription)
+PLAN: Intelligence Briefing — Monthly Subscription
 
-This client pays monthly for ongoing intelligence. Show depth and justify recurring investment.
+WRITING GUIDELINES:
+- Tone: analytical, forward-looking, slightly more detailed than the Scan.
+- Use data tables for: competitor comparison, market trends, pricing analysis.
+- Include a "Risk Radar" section that flags specific threats with probability estimates.
+- Every recommendation must include a timeline (short-term: 0-30 days, medium: 30-90 days).
+- If search data is available, cite specific sources. If not, label numbers as estimates.
+- Write in American English. Use section headers, bold, and clear hierarchy.
+- Include estimated ROI or expected impact for at least 2 recommendations.
 
 REPORT STRUCTURE:
-## Executive Summary (250-350 words)
-## Market Intelligence
-## Competitive Deep-Dive
-## Strategic Recommendations (4-5)
-## Risk & Opportunity Radar
-## 90-Day Action Plan
 
-LENGTH: 6,000-7,000 characters.`;
+## Executive Summary
+One paragraph on the most important finding. One paragraph on the recommended strategy. Total: ~200 words.
+
+## Market Intelligence
+- Industry landscape (size, growth rate, key dynamics — cite search data)
+- Emerging trends (3-4 trends with brief explanation)
+- Consumer/market shifts affecting this business
+- "What this means" paragraph tailored to this specific client
+
+## Competitive Deep-Dive
+- **Direct competitors:** Table format — Name | Positioning | Pricing | Weakness | Jade Compass Insight
+- **Indirect threats:** Adjacent businesses or new entrants
+- **White space:** What competitors are NOT doing that this business could own
+- **Benchmarking:** How this business compares on key metrics (pricing, product range, online presence, customer experience)
+
+## Strategic Recommendations (4)
+For each recommendation:
+1. **Recommendation title** (bold, action-oriented verb)
+2. **Supporting data** (specific numbers or observations)
+3. **Implementation approach** (3-5 concrete steps)
+4. **Expected impact** (quantified when possible)
+5. **Timeline:** Short-term or medium-term
+
+## Risk & Opportunity Radar
+A table: Risk/Opportunity | Probability | Impact | Mitigation/Leverage Strategy
+
+## 90-Day Action Plan
+Month 1, 2, 3. Specific milestones and deliverables.
+
+LENGTH: 5,000-7,000 characters.`;
   }
 
-  // Deep Dive
-  return `You are a senior strategy consultant at Jade Compass. Produce a COMPREHENSIVE Deep Dive strategic report.
+  // ── Deep Dive ($497) ──
+  return `You are a senior partner at a top-tier strategy consulting firm (think McKinsey, Bain, BCG) writing a comprehensive strategic report. The client paid $497 for this analysis. The report must feel like a $10,000 consulting engagement. Depth, data, and actionable strategy are non-negotiable.
 
 ${clientInfo}
-PLAN: Deep Dive ($497 — one-time premium)
+PLAN: Deep Dive — Premium Strategic Analysis
 
-This is the highest-tier product. The client paid $497. The report must feel like a $5,000 consulting engagement.
+WRITING GUIDELINES:
+- This is the flagship product. Write with authority, depth, and precision.
+- Use data tables extensively: market sizing, competitor profiles, pricing benchmarks, financial projections.
+- Include at least 2-3 tables and 1 structured comparison.
+- Financial analysis must include: revenue benchmarks, margin estimates, customer acquisition cost benchmarks, and ROI projections for at least 2 recommendations.
+- Every recommendation must be: specific, timed, quantified (or "estimated to"), and tied to a clear business outcome.
+- Cite search data sources where available. Mark estimated numbers clearly with "estimated" or "industry benchmark suggests."
+- Include a SWOT or similar structured framework.
+- Write in American English. Professional but not academic. Direct, confident, data-driven.
+- Format: use ## for section headers, ### for subsections, **bold** for key numbers and emphasis, tables with | separators.
 
 REPORT STRUCTURE:
-## Executive Summary (400-500 words)
-## Business Situation Analysis
-## Market Analysis
-## Competitive Intelligence
-## Strategic Recommendations (5-6)
-## Financial Analysis
-## Risk Analysis
-## Implementation Roadmap
-## Key Performance Indicators
 
-LENGTH: 8,000-12,000 characters.`;
+## Executive Summary
+(~300 words) The strategic situation in one page. Problem, analysis, recommendation, expected outcome. An executive should be able to read only this and know what to do.
+
+## Business Situation Analysis
+- Company overview & current position
+- Key challenges (from client questionnaire) reframed as strategic problems
+- Core strategic question this report answers
+
+## Market Analysis
+- **Industry Overview:** Market size, growth rate, key segments. Cite search data with sources.
+- **Market Trends:** 4-6 trends affecting this industry. For each: trend description, impact on this business, strategic implication.
+- **Customer Analysis:** Target customer profile, buying behavior, unmet needs, willingness to pay.
+- **Market Sizing Table:** Segment | Size | Growth | Your Share Potential | Barrier
+
+## Competitive Intelligence
+- **Competitor Profiles (3-5):** Table — Competitor | Revenue (est.) | Positioning | Key Strength | Key Weakness | Strategic Lesson
+- **Competitive Dynamics:** Market concentration, pricing landscape, switching costs, barriers to entry.
+- **White Space Analysis:** What competitors overlook — specific gaps this business can own.
+
+## Strategic Recommendations (5-6)
+For each recommendation:
+### [Action verb] [specific outcome]
+- **Strategic Rationale:** Why this matters, supported by data
+- **Implementation Plan:** Step-by-step (5-8 steps) with timeline
+- **Resource Requirements:** What it costs (time, money, people)
+- **Expected Impact:** Quantified where possible (e.g., "could increase revenue by $X-Y annually within 6 months")
+- **Risk:** What could go wrong and how to mitigate
+- **Priority:** High/Medium/Low
+
+## Financial Analysis
+- Revenue benchmarks for this industry/size (cite search data)
+- Cost structure benchmarks
+- Customer acquisition cost estimates
+- ROI projection for top 2 recommendations
+- Pricing strategy recommendations with rationale
+
+## Risk Analysis
+- **Table:** Risk | Probability | Impact | Mitigation Strategy
+- Key assumptions this analysis depends on
+- Early warning signals to watch
+
+## Implementation Roadmap
+- **Phase 1 (0-30 days):** Quick wins
+- **Phase 2 (30-90 days):** Core initiatives
+- **Phase 3 (90-180 days):** Growth acceleration
+- **Phase 4 (6-12 months):** Market position consolidation
+
+## Key Performance Indicators
+- 5-7 KPIs to track, with suggested targets
+
+LENGTH: 8,000-14,000 characters. Make every word count.`;
 }
 
 // ─── POST handler ─────────────────────────────────────────────────
@@ -199,7 +306,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "DeepSeek API key not configured" }, { status: 500 });
     }
 
-    const maxTokens = order.plan === "deepdive" ? 8192 : order.plan === "briefing" ? 6144 : 4096;
+    const maxTokens = order.plan === "deepdive" ? 12000 : order.plan === "briefing" ? 8192 : 6144;
 
     console.log(`Searching market data for: ${order.formData.industry}`);
     const autoSearchData = await searchMarketData(order.formData.industry || "", order.formData.businessName || "");
